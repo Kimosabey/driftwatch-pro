@@ -1,25 +1,30 @@
 # Getting Started — DriftWatch Pro
 
 ## Prerequisites
-- Docker & Docker Compose
-- Node.js 20+ and/or Python 3.11+ (depending on the component)
-- API keys for any cloud services used (see `.env`)
+- **Python 3.11+**
+- **numpy** (the only dependency) — `pip install -r requirements.txt`
+- **Docker** (optional) to run the HTTP service.
 
-## Installation
+## Run it
 ```bash
 git clone https://github.com/Kimosabey/driftwatch-pro.git
 cd driftwatch-pro
-docker compose up
+pip install -r requirements.txt
+
+python -m unittest discover -s tests   # 10 tests
+python -m driftwatch.demo              # baseline vs. stable / shifted / variance batches
+docker compose up                      # HTTP API on :8000
 ```
 
-## Environment Variables
-| Key | Description |
-| :--- | :--- |
-| `PORT` | Service port |
-| `LOG_LEVEL` | Logging verbosity |
-| _(project-specific keys added during implementation)_ | |
+## Environment variables
+| Key | Default | Description |
+| :--- | :--- | :--- |
+| `PORT` | `8000` | HTTP port for the API |
 
-## Running Tests
+Detection thresholds are constructor arguments on `DriftMonitor(alpha=0.05, psi_threshold=0.2)` rather
+than env vars.
+
+## Running tests
 ```bash
-# unit + integration test commands added during implementation
+python -m unittest discover -s tests   # stdlib test runner, no pytest needed
 ```
