@@ -20,8 +20,8 @@ and flags drift before accuracy quietly degrades:
 
 Both are implemented directly on numpy (no scipy), so the maths is auditable and the package is light.
 
-> Part of my Senior Hybrid Engineer 2026 portfolio (`#48`). MLOps reliability under the Antigravity model —
-> statistics run locally, cheaply, and explainably.
+> MLOps reliability, local-first — the statistics run locally, cheaply, and
+> explainably.
 
 ## 🚀 Quick Start
 ```bash

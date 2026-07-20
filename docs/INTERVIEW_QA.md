@@ -25,5 +25,5 @@ KS catches a change in distribution *shape*; PSI is the drift metric MLOps teams
 identical / >0.25 on shifted, the small-sample regression, and severity grading. No pytest needed.
 
 ### "How does it fit your portfolio?"
-It's my MLOps / data-science piece (real Python), under the "Antigravity" model — cheap, local, explainable
+It's my MLOps / data-science piece (real Python), under the local-first model — cheap, local, explainable
 statistics (`#48`).
